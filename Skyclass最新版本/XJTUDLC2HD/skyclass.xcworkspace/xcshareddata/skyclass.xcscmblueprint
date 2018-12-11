@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "646B80D5EAD996CAF723BE11B79BBF83F259FB10",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "646B80D5EAD996CAF723BE11B79BBF83F259FB10" : 0,
+    "647F286BE39706B3E3A431F3074B0F5FAF32761A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "48FC8981-5EB2-45C3-BC06-873A094D07DC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "646B80D5EAD996CAF723BE11B79BBF83F259FB10" : "Skyclass\/",
+    "647F286BE39706B3E3A431F3074B0F5FAF32761A" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "skyclass",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "修改版本2.2修改播放器bug和改IP为域名\/XJTUDLC2HD\/skyclass.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Morgan-1\/Skyclass.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "646B80D5EAD996CAF723BE11B79BBF83F259FB10"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Morgan-1\/helloword.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "647F286BE39706B3E3A431F3074B0F5FAF32761A"
+    }
+  ]
+}

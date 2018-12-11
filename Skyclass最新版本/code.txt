@@ -1,0 +1,153 @@
+string strStudentCode = StudentSchoolInfomation.StudentCode;
+        StudentSelectCourseLogic m_StudentSelectCourseLogic = new StudentSelectCourseLogic();
+        Hashtable ht = new Hashtable();
+        ht.Add("StudentCode", strStudentCode);
+        ht.Add("TeachPlanID", StudentSchoolInfomation.TeachPlanID.ToString());
+        DataTable dtProgress = m_StudentSelectCourseLogic.GetStudentStudyProgress(ht);
+
+        int iTotalCreditHour = 0;
+        int iSumCreditHour = 0;
+        int iGraduatelowlimDays = 0;
+        int iGraduatehighlimDays = 0;
+        int iStudyDays = 0;
+
+        int iProgress = 1;
+        int iStudySpeed = 1;
+        int iTotalSpeed = 1;
+
+        string sTip = "";
+
+        if (dtProgress.Rows.Count > 0)
+        {
+            iTotalCreditHour = Convert.ToInt32(dtProgress.Rows[0]["TOTALCREDITHOUR"]);
+            iSumCreditHour = Convert.ToInt32(dtProgress.Rows[0]["sumcredithour"]);
+            iGraduatelowlimDays = Convert.ToInt32(dtProgress.Rows[0]["graduatelowlim"]);
+            iGraduatehighlimDays = Convert.ToInt32(dtProgress.Rows[0]["graduatehighlim"]);
+            iStudyDays = Convert.ToInt32(dtProgress.Rows[0]["studydays"]);
+        }
+        if (iTotalCreditHour >= iSumCreditHour)
+        {
+            iProgress = 100;
+            sTip = "你已完成教学计划规定总学分！";
+        }
+        else
+        {
+            if (iGraduatehighlimDays < iStudyDays)
+            {
+                sTip = "你的学习已结束！";
+                if (iTotalCreditHour > iSumCreditHour)
+                {
+                    iProgress = 100;
+                }
+                else
+                {
+                    if (iSumCreditHour != 0)
+                    {
+                        iProgress = iTotalCreditHour * 100 / iSumCreditHour;
+                    }
+                    else
+                    {
+
+                        iProgress = 1;
+                    }
+                }
+            }
+            else if (iGraduatelowlimDays < iStudyDays)
+            {
+                sTip = "学习进度已落后，请加油！";
+                if (iTotalCreditHour > iSumCreditHour)
+                {
+                    iProgress = 100;
+                }
+                else
+                {
+                    if (iSumCreditHour != 0)
+                    {
+                        iProgress = iTotalCreditHour * 100 / iSumCreditHour;
+                    }
+                    else
+                    {
+
+                        iProgress = 1;
+                    }
+                }
+            }
+            else
+            {
+                if (iTotalCreditHour == 0)
+                {
+                    sTip = "欢迎选课学习！";
+                }
+                else
+                {
+                    if (iTotalCreditHour > iSumCreditHour)
+                    {
+                        iProgress = 100;
+                    }
+                    else
+                    {
+                        if (iSumCreditHour != 0)
+                        {
+                            iProgress = iTotalCreditHour * 100 / iSumCreditHour;
+                        }
+                        else
+                        {
+
+                            iProgress = 1;
+                        }
+                    }
+                    if (iGraduatelowlimDays != 0)
+                    {
+                        iStudySpeed = iTotalCreditHour * 1000 / iGraduatelowlimDays; //标准速度
+                    }
+                    else
+                    {
+                        iStudySpeed = 0;
+                    }
+                    if (iGraduatelowlimDays != 0)
+                    {
+                        iTotalSpeed = iSumCreditHour * 1000 / iStudyDays;            //现有速度
+                    }
+                    else
+                    {
+                        iTotalSpeed = 1;
+
+                    }
+                    int iOverSpeed = (iStudySpeed - iTotalSpeed) * 100 / iTotalSpeed;
+
+                    if (iOverSpeed == 0)
+                    {
+                        sTip = "学习进度不错，继续保持！";
+                    }
+                    else if (iOverSpeed < 50)
+                    {
+                        sTip = "学习进度很好，继续保持！";
+                    }
+                    else if (iOverSpeed >= 50)
+                    {
+                        sTip = "学习进度非常好，继续保持！";
+                    }
+                    else if (iOverSpeed > -50 && iOverSpeed < 0)
+                    {
+                        sTip = "学习进度已落后，请加油！";
+                    }
+                    else if (iOverSpeed > -100 && iOverSpeed <= -50)
+                    {
+                        sTip = "学习进度落后很多，请抓紧时间学习！";
+                    }
+                    else if (iTotalSpeed == 0 || iStudySpeed == 0)
+                    {
+                        sTip = "欢迎选课学习！";
+                    }
+                }
+            }
+        }
+
+        liTotalScore.Text = iSumCreditHour.ToString();
+        liTip.Text = sTip.ToString();
+
+        liProgress.Text = string.Format("<div class=\"greenbgBar\" style=\"width:{0}%;\"></div><span class=\"barTip\">您的学习进度[已经获得 {1} 学分]</span>", iProgress, iTotalCreditHour);
+
+
+        Hashtable htSearch = new Hashtable();
+        htSearch.Add("StudentCode", strStudentCode);

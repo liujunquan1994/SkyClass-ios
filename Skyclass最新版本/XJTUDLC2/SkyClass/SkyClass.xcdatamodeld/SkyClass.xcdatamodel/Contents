@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Xcode 4.1">
+    <entity name="Attachment" representedClassName="Attachment" syncable="YES">
+        <attribute name="articleID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attachmentPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attachmentStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainHead" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Course" representedClassName="Course" syncable="YES">
+        <attribute name="courseCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseIDTOSend" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="introduction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacher" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CourseStruct" representedClassName="CourseStruct" syncable="YES">
+        <attribute name="courseID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseStructID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseStructName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="File" representedClassName="File" syncable="YES">
+        <attribute name="courseCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseStructID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fileID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fileURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="progress" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="LiveList" representedClassName="LiveList" syncable="YES">
+        <attribute name="classid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="classname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="screenpath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serverpath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teachername" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videopath" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Log" representedClassName="Log" syncable="YES">
+        <attribute name="courseCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="file" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="len" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="operationID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="NewsList" representedClassName="NewsList" syncable="YES">
+        <attribute name="des" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="keywords" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES">
+        <attribute name="loginname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loginState" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentCode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Course" positionX="34" positionY="15" width="128" height="135"/>
+        <element name="CourseStruct" positionX="-180" positionY="110" width="128" height="88"/>
+        <element name="File" positionX="324" positionY="125" width="128" height="178"/>
+        <element name="LiveList" positionX="-261" positionY="219" width="128" height="165"/>
+        <element name="Log" positionX="97" positionY="-126" width="128" height="135"/>
+        <element name="NewsList" positionX="-225" positionY="-27" width="128" height="105"/>
+        <element name="Student" positionX="-432" positionY="0" width="128" height="105"/>
+        <element name="Attachment" positionX="-225" positionY="27" width="128" height="120"/>
+    </elements>
+</model>

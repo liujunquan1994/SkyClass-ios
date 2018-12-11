@@ -1,0 +1,10 @@
+platform:ios,'6.0'
+
+target ‘skyclass’ do
+	pod "KRVideoPlayer"
+	pod 'MJExtension'
+	pod 'Masonry'
+	pod 'MJRefresh'
+	pod 'MBProgressHUD', '~> 0.9.1'
+	pod 'UMengAnalytics'
+end

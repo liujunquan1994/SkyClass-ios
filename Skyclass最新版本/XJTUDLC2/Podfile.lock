@@ -1,0 +1,27 @@
+PODS:
+  - KRVideoPlayer (1.0.1)
+  - Masonry (1.1.0)
+  - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.15.1)
+  - MJRefresh (3.1.15.7)
+  - UMengAnalytics (4.2.4)
+
+DEPENDENCIES:
+  - KRVideoPlayer
+  - Masonry
+  - MBProgressHUD (~> 0.9.1)
+  - MJExtension
+  - MJRefresh
+  - UMengAnalytics
+
+SPEC CHECKSUMS:
+  KRVideoPlayer: 08918da1b99cae35fd4c15b2ec2b49358d4c985f
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
+
+PODFILE CHECKSUM: ab1e80046dd444b5e6a75c4003a42f497ee2c51e
+
+COCOAPODS: 1.4.0
